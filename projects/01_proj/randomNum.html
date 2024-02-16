@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Quote Generator</title>
+    <style>
+      body {
+        background-color: black;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;/
+      }
+      #quoteText {
+        padding: 10px 30px;
+        background-color: brown;
+        border-radius: 8px;
+        cursor: pointer;
+        color: white;
+        font-size: medium;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="quoteText"></p>
+
+
+    <script>
+      setInterval(function (e) {
+      let time = new Date().toLocaleTimeString();
+      let date1 = new Date().toLocaleDateString();
+      const quoteText = document.getElementById("quoteText");
+      let span = document.createElement('span');
+      quoteText.appendChild(span)
+      span.textContent = date1;
+      quoteText.textContent = time;
+        // console.log(time);
+      }, 1000);
+    </script>
+
+    <!-- <script>
+      let clockTime = document.querySelector("#quoteText");
+      setInterval(function () {
+        let date = new Date();
+        let correctTime = date.toLocaleTimeString();
+        clockTime.textContent = `${correctTime}`;
+      }, 1000);
+    </script> -->
+  </body>
+</html>

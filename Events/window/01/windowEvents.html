@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>window || Events</title>
+  </head>
+  <body id="idBody">
+    <div class="">
+      <!-- onload event -->
+      If you want to execute a function when the page is loaded, you can use the
+      onload event. This event is triggered when the page is loaded.
+      <p id="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi assumenda
+        maxime fuga esse. Explicabo obcaecati atque adipisci, magni commodi
+        consectetur vitae omnis odit modi blanditiis? Rem illum distinctio
+        voluptatem laudantium natus, aperiam nesciunt vitae atque beatae quos
+        assumenda? Illo officia temporibus tempora doloribus dicta non totam ad
+        inventore provident quidem.
+      </p>
+      <p id="paraId"></p>
+
+      <button id="btn10">popup event</button>
+      <!-- onresize event -->
+      <!-- The onresize event is triggered when you resize the browser window.-->
+
+      <!-- onbeforeunload event -->
+      <!-- The onbeforeunload event is triggered when the user attempts to close the browser tab. -->
+    </div>
+    <script>
+      //   let body1 = document.querySelector("body");
+
+      //   window.addEventListener("load", loadingFunction);
+      //   function loadingFunction() {
+      // alert("page is loading");
+      // console.log("page is loading");
+      //   }
+      // ------------------------- onresize event  -----------------
+      // window.document.addEventListener('resize',resizeW)
+      // function resizeW() {
+      //     alert("resize window");
+      // }
+      // ----------------- <!-- onbeforeunload event --> ---------------
+      //   let onbeforeunload1 = window.document.getElementsByTagName('body');
+      // onbeforeunload1.addEventListener('beforeunload',function(){
+      //     alert("If you close the tab, it will ask you to confirm.")
+      // })
+
+      // function onbeforeunload() {
+      //     alert("If you close the tab, it will ask you to confirm.")
+
+      // }
+
+      //   onbeforeunload1.addEventListener("beforeunload", function (e) {
+      // var confirmationMessage = "If you close the tab, it will ask you to confirm.";
+
+      // // Standard for most browsers
+      // e.returnValue = confirmationMessage;
+
+      // // For some older browsers
+      // return confirmationMessage;
+      //   });
+
+      // ---------------------------------onoffline event-------
+
+      window.addEventListener("offline", offLine);
+      function offLine() {
+        const demo = document.getElementById("paraId");
+        if (demo) {
+          demo.innerHTML = "You are offline";
+          demo.style.color = "red";
+          demo.style.fontSize = "30px";
+        }
+      }
+      //   ---------------  ononline event ---------------
+      // window.addEventListener("online", onOnline);
+      // function onOnline() {
+      //   var demo = document.getElementById("paraId");
+      //   if (demo) {
+      //     demo.innerHTML = "You are online";
+      //     demo.style.color = "green";
+      //     demo.style.fontSize = "20px";
+      //     console.log("online");
+      //   }
+      // }
+
+      // function offLine() {
+      //   var demo = document.getElementById("paraId");
+      //   demo.innerHTML = "You are offline";
+      //   demo.style.color = "red";
+      // console.log('offline');
+      // }
+
+      // Attach event listeners using JavaScript
+      // window.document.addEventListener("online", onOnline);
+      // window.document.addEventListener("offline", offLine);
+      //   window.addEventListener("online", () => {
+      //     console.log("online");
+      //   });
+      //   window.addEventListener("offline", () => {
+      //     console.log("offline");
+      //   });
+
+      //   function updateOnlineStatus() {
+      //     document.getElementById("paraId").innerText = "Online";
+      //   }
+
+      //   function updateOfflineStatus() {
+      //     document.getElementById("paraId").innerText = "Offline";
+      //   }
+
+      //   window.addEventListener("online", updateOnlineStatus);
+      //   window.addEventListener("offline", updateOfflineStatus);
+
+      // ---------------------------- Popup -----------
+    </script>
+  </body>
+</html>

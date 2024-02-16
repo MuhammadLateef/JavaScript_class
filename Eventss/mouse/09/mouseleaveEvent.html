@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseleave | event</title>
+</head>
+<body>
+    <div onmouseenter="enterColor()" onmouseleave="leaveColor()" id="div">
+        <p>This is a div</p>
+      </div>
+      
+      <script>
+        function enterColor() {
+          document.getElementById("div").style.backgroundColor = "blue";
+        }
+        function leaveColor() {
+          document.getElementById("div").style.backgroundColor = "red";
+        }
+      </script>
+</body>
+</html>

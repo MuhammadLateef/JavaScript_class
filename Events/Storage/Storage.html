@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Storage | Event</title>
+  </head>
+  <body>
+
+    <h1>storage event is fired when the storage area changes</h1>
+    <p><b>Note</b>: This event is only fired when the storage area of other windows is changed and not when the storage area of the current window is changed.</p>
+    <button onclick="addItemLocalStorage()">Add item to local storage</button>
+  
+    <script>
+        let key = prompt("Enter your key");
+        let value = prompt("Enter your value");
+        localStorage.setItem(key,value);
+        console.log(`the input key: ${key} and input value: ${value}`);
+
+        if(key=='blue' || key=='red');
+        {
+            localStorage.removeItem(key);
+        }
+      // add new item to local storage
+      function addItemLocalStorage() {
+        var newWindow = window.open("");
+        newWindow.localStorage.setItem("deport", "computer secince");
+        newWindow.close();
+      }
+  
+      function storageEvent() {
+        alert("Storage changed");
+      }
+      window.addEventListener("storage", storageEvent);
+    </script>
+
+    <!-- <script>
+      var output = document.createElement("p");
+      document.body.appendChild(output);
+      //
+      window.addEventListener('storage',function (event) {
+        if(event.key==='user-value'){
+            output.textContent = event.newValue;
+        }
+      })
+    </script> -->
+  </body>
+</html>

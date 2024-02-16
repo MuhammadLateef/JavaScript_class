@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error handling</title>
+  </head>
+  <body>
+    <h2>Error Handling!!</h2>
+
+    <script>
+      // -----------------------
+
+      // try {
+      // let name = "my name";
+      // name == num;
+      // } catch {
+      //   console.log("num is not defined");
+      //   console.error("num is not defined");
+      //   console.warn("num is not defined");
+      // }
+
+      // try {
+      //   setTimeout(() => {
+      //     let name = "my name";
+      //     name == num;
+      //   }, 2000); //
+      // } catch {
+      //   console.log("num is not defined");
+      //   console.warn("num is not defined");
+      // }
+
+      // setTimeout(() => {
+      //   try {
+      //     let name = "name";
+      //     name == num;
+      //   } catch(err) {
+      //     // console.error("num is not defined",err);
+      //     // console.error("num is not defined",err.name);
+      //     // console.error("num is not defined",err.message);
+      //     // console.error("num is not defined",err.stack);
+      //   }
+      // }, 2000);
+
+      let json = `{
+        "name":"Sajid ali", 
+        "Dept":"Computer science"
+      }`;
+
+try{ 
+  // let data = json();
+  let data = JSON.parse(json); //  json _____________  
+
+ console.log( data.name);
+ console.log( data.Roll);
+ console.log( data.Dept);
+
+ if(!data.Roll) { // not
+  throw new Error("the Roll No is Missing on database")
+ }
+
+  console.log(data);
+} catch(err) {
+  console.log(err);
+}
+
+
+
+
+
+
+
+
+      // ------------ try catch -------------
+      // try {
+      //     console.log("first line is start from here!!");
+      //     ufff;
+      //     console.log("last line is end from here!!");
+      // } catch (err) {
+      //     // console.error('some thing went wrong !!');
+      //     console.error(err);
+      // }
+
+      //   failed try and catch in setTimeout method
+      // We used the try catch inside the setTimeout method'
+      //   setTimeout(() => {
+      //     try {
+      //       console.log("this code run after 2s.");
+      //       funciton1();
+      //     } catch (error) {
+      //     //   console.log("error");
+      //       console.log(error.name);
+      //       console.log(error.message);
+      //       console.log(error.stack);
+      //     }
+      //   }, 2000);
+
+      // -------------------------------------------------------
+
+      //   try {
+      //     xyz;
+      //   } catch (error) {
+      //     //   console.log("error");
+      //     console.log(error.name);
+      //     console.log(error.message);
+      //     console.log(error.stack);
+      //   }
+
+      // ---------------------------- Server side ------------------------------------
+      //   try {
+      //     let json = `{"student":"Latif", "dateOfBirth":"23"}`;
+      //     let data = JSON.parse(json);
+      //
+      //     console.log(data.student);
+      //  if(!data.RegistrationNo) {
+      //     throw new Error("Missing Registration No!!")
+      //  }
+
+      //     console.log(data.RegistrationNo);
+      //     console.log(data.dateOfBirth);
+      //   } catch (err) {
+      //     console.error(err);
+      //   }
+
+      // let jsonData = `{"nameofStudent":"Muhammad", "RegistrationNo":"2020-kiu-bs3034","deportment":"computer science"}`
+
+      // // let data = JSON.parse(jsonData);
+
+      // console.log(jsonData  );
+      // const checkRange = (num) =>{
+      //     if(num<30) throw new RangeError("Rnage Error occures")
+      //     return true;
+      // }
+      // checkRange(20);
+
+      // console.log(decodeURI(''));
+      // console.log(decodeURI(''));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard | event</title>
+  </head>
+  <body>
+    <div class="">
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <p id="paraId"> </p>
+    </div>
+
+    <script>
+        let textarea1 = document.querySelector('textarea');
+        textarea1.addEventListener('keydown', KeyDown);
+        function KeyDown(events) {
+            let paragraph = document.getElementById('paraId');
+            //  let key = events.target.value;
+            paragraph.innerText = `You Enter: ${events.key} keys `;
+            // paragraph.innerText = `You Enter: ${events.target.value} keys `;
+            console.log('keyboard event');
+        }
+    </script>
+  </body>
+</html>

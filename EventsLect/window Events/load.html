@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>load | window event</title>
+  </head>
+  <body>
+    <div id="">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+        quae libero! Ratione in dignissimos deserunt labore explicabo dolor
+        numquam enim?
+      </p>
+    </div>
+    <script src="./window.js"></script>
+    <script>
+      function loadEvent() {
+        alert("addEventListener method is loading");
+        document.write("addEventListener Page is loading");
+        console.log(" addEventListener window is loading");
+      }
+
+      window.addEventListener("load", loadEvent);
+    </script>
+  </body>
+</html>

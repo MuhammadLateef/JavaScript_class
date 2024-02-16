@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | latif</title>
+</head>
+<body>
+   <ul class="ul">
+    <li>javascript</li>
+   </ul>
+</body>
+<script>
+    function addLanguage(languages) {
+        const li = document.createElement("li");
+        li.innerHTML = `${languages}`;
+        document.querySelector(".ul").appendChild(li);
+        // const parent = document.querySelector(".ul");
+        // parent.appendChild(li);
+        console.log(li)
+    } 
+    addLanguage("Python");
+
+    function optimizLang(langes) {
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(langes));
+        const div = document.querySelector(".ul").appendChild(li);
+    }
+    optimizLang('C++');
+    optimizLang('Java');
+</script>
+</html>

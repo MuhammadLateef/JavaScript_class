@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <input type="text" id="inputId" placeholder="Enter value to list " />
+    <button id="buttonId">add task</button>
+    <ul id="taskList"></ul>
+
+   <script>
+    const inputTask = document.getElementById('inputId');
+    const addButton = document.getElementById('buttonId');
+    const taskList = document.getElementById('taskList');
+    
+    
+    addButton.addEventListener('click', addTask);
+    function addTask() {
+        let task = inputTask.value.trim();
+        if(task!=='') {
+            let listItem = document.createElement('li');
+            listItem.textContent = task;
+            let delete_button = document.createElement('button');
+            delete_button.textContent = 'delete';
+            delete_button.addEventListener('click', deleteFunction)
+            taskList.appendChild(listItem);
+            listItem.appendChild(delete_button);
+            inputTask.value='';
+        }
+    }
+
+    function deleteFunction(event) {
+        let deleted = event.target.parentElement;
+        deleted.remove(deleted);
+    }
+   </script>
+  </body>
+</html>

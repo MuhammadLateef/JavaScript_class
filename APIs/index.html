@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APIs</title>
+  </head>
+  <body>
+    <h2>APIs (Application Programming Interface)</h2>
+    <table border="1px" style="padding: 20px">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Address</th>
+          <th>Compony</th>
+          <th>Website</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        
+      </tbody>
+    </table>
+
+    <script>
+     async function GetApiFunction() {
+        let response = await fetch("https://jsonplaceholder.typicode.com/users");
+        console.log(response);
+        let result = await response.json();
+        console.log(result);
+        document.getElementById('tbody').innerHTML = result.map((users)=>
+        `<tr>
+            <td> ${users.name} </td>
+            <td> ${users.username} </td>
+            <td> ${users.email} </td>
+            <td> ${users.phone} </td>
+            <td> ${users.address.city} </td>
+            <td> ${users.company.name} </td>
+            <td> ${users.website} </td>
+         </tr>`
+        ).join("");
+      }
+      GetApiFunction();
+    </script>
+  </body>
+</html>

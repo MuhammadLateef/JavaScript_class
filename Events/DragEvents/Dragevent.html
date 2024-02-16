@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>drag | event</title>
+  </head>
+  <body>
+    <p
+      draggable="true"
+      ondrag="onDrag()"
+      ondragstart="dragStart()"
+      ondragend="dragEnd()"
+    >
+      Drag me
+    </p>
+    <textarea
+      ondragenter="dragEnter()"
+      ondragleave="dragLeave()"
+      ondragover="dragOver(event)"
+    ></textarea>
+    <p id="output"></p>
+    <script>
+      const output = document.getElementById("output");
+      function onDrag() {
+        output.innerHTML += "Dragging...<br>";
+      }
+      function dragStart() {
+        output.innerHTML = "Dragging started...<br>";
+      }
+      function dragEnd() {
+        output.innerHTML += "Dragging ended...<br>";
+      }
+      function dragEnter() {
+        output.innerHTML += "Dragging entered...<br>";
+      }
+      function dragLeave() {
+        output.innerHTML += "Dragging left...<br>";
+      }
+    </script>
+  </body>
+</html>

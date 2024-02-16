@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <ul id="main">
+      <li>Home</li> 
+      <li>Services</li>
+      <li class="current">Team</li>
+      <li class="" style="display: none;">Testimonials</li>
+      <li>About us</li>
+      <li>Contact us</li>
+    </ul>
+
+    <script>
+      let current = document.querySelector(".current");
+      let parent = current.parentNode;
+      // console.log(parent);
+
+    //   function getSibling(parent) {
+    //     let firstChild = parent.firstElementChild;
+    //     let siblings = [];
+    //     while (firstChild) {
+    //       if (firstChild.nodeType === 1 && firstChild != parent) {
+    //         siblings.push(firstChild);
+    //       }
+
+    //       firstChild = firstChild.nextSibling;
+    //     }
+    //     return siblings;
+    //   }
+    //   console.log(getSibling(parent));
+
+
+    let div = document.createElement('div');
+    let li = document.createElement('li');
+    let p = document.createElement('p');
+    let h1 = document.createElement('h1');
+    // console.log(div);
+    // console.log(li);
+    // console.log(p);
+    // console.log(h1);
+
+    let container = document.getElementById('main');
+    container.appendChild(li);
+    container.appendChild(li);
+    container.appendChild(li);
+//  ----- get innerText
+// console.log("textContent ",container.textContent); // textContent
+// console.log("innerHTML ", container.innerHTML);
+// console.log("innerText ", container.innerText);
+
+
+let appendLi = container.appendChild(li);
+appendLi.innerText = 'Our services';
+
+let parent1 = document.getElementById('main');
+let li1 = document.createElement('li');
+li1.textContent = 'Home page'
+
+// parent1.replaceChild(li1, parent1.firstElementChild)
+parent1.removeChild(parent1.firstElementChild)
+
+    </script>
+  </body>
+</html>

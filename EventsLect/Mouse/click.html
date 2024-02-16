@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>click | Event</title>
+  </head>
+  <body id="bodyId">
+    <div class="">
+      <h2>Click mouse Event</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        unde officiis libero adipisci illum rem labore dolor, esse nemo.
+        Repellendus excepturi ducimus maiores nostrum hic veritatis vero quasi,
+        necessitatibus, nisi quisquam, molestias ab. Porro eum alias recusandae
+        assumenda dolorum odio?
+      </p>
+      <button id="btn">click me!!</button>
+    </div>
+
+    <script>
+      let btn = document.getElementById("btn");
+      btn.addEventListener('click',changBGColor)
+
+      function changBGColor(params) {
+        let body = document.getElementById('bodyId');
+        body.style.backgroundColor = 'black';
+        body.style.color = 'white'
+        alert("click event is calling")
+      }
+    </script>
+  </body>
+</html>

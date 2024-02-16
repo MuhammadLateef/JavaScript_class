@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyup | event</title>
+</head>
+<body>
+    <div class="">
+        <p id="output"></p>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </div>
+
+    <script>
+        let textarea2 = document.querySelector('textarea');
+        let count = 0;
+        textarea2.addEventListener('keyup',keyUp);
+        function keyUp(params) {
+
+           let demo = document.getElementById('output');
+           demo.innerText = `the key is ${params.key} and ${count++}`
+        }
+    </script>
+</body>
+</html>

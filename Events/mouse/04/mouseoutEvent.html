@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mouseout || event</title>
+  </head>
+  <body>
+    <button onmouseover="changeColor()" onmouseout="reverseColor()" id="btn">
+      Change Color || 
+    </button>
+
+    <script>
+      function changeColor() {
+        document.getElementById("btn").style.backgroundColor = "red";
+      }
+      function reverseColor() {
+        document.getElementById("btn").style.backgroundColor = "white";
+      }
+    </script>
+  </body>
+</html>

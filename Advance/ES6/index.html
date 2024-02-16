@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6</title>
+  </head>
+  <body>
+    <script>
+      //---------- var, let and const -----------------
+
+      // function loopOfNumbers() {
+      //     for (let i = 0; i < 5; i++) {
+      //         console.log(i);
+      //     }
+
+      //     console.log(i);
+
+      // }
+      // loopOfNumbers()
+      // try{
+
+      //     let x = 34;
+      // x = 240;
+      // } catch(err) {
+      //     console.error(err.message);
+      // }
+
+      // ----------------------- objects ----------
+
+      //   const student = {
+      //     name: "Haaji sahab",
+      //     subject1: 34,
+      //     subject2: 45,
+      // marks: function () {
+      //   console.log("object method is a function");
+      // },
+      //     marks() {
+      //       console.log("object method is a function");
+      //     },
+
+      //   };
+
+      // //   console.log(student.marks())
+      // student.marks()
+
+      // -------------- this -----------
+
+      const student = {
+        name: "Haaji sahab",
+        subject1: 34,
+        subject2: 45,
+
+        subjectAll() {
+          console.log(this);
+        },
+      };
+      student.subjectAll();
+      let calledd = student.subjectAll.bind(student);
+     calledd();
+
+    </script>
+  </body>
+</html>

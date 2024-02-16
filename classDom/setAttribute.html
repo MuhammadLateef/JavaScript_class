@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <div class="">
+        <a id="link" >click</a>
+      <input type="text" id="input" value="enter name">
+      <button onClick="functionClick()" >open button</button>
+    </div>
+    <div id="main" class="main classrem container">
+        <input type="text" name="value" value="enter value" id="inputId">
+    </div>
+    <script>
+      function functionClick() {
+        let link = document.getElementById("link");
+        link.setAttribute(
+          "href",
+          "https://www.javascripttutorial.net/javascript-dom/javascript-setattribute/"
+        );
+        link.setAttribute('style','color:green');
+        link.setAttribute('target','_blank');
+        // -----------<<<setAttributes>>>-------------
+      let inputfield = document.getElementById('input');
+      inputfield.setAttribute('type','button')
+      }
+// --------------------<<<<getAttribute>>>>>------------------------
+  let getAttr = document.getElementById('inputId');
+  console.log(getAttr.getAttribute('id'))
+  console.log(getAttr.getAttribute('type'))
+  console.log(getAttr.getAttribute('name'))
+  console.log(getAttr.getAttribute('value'))
+ let removeAttr = getAttr.removeAttribute('id')
+ console.log(removeAttr);
+// --------------------------<<<>>>---------------------------------
+let main = document.getElementById('main');
+console.log(main.classList)
+    </script>
+  </body>
+</html>

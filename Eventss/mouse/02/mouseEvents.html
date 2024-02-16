@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse || Event</title>
+  </head>
+  <body>
+    <p id="elm">Click this element</p>
+    <p id="elm2">doubleClick on element</p>
+
+    <script>
+        let clickPara = document.getElementById('elm');
+        clickPara.addEventListener('click',changeColor)
+      function changeColor(e) {
+        document.getElementById("elm").style.color = "red";
+      }
+
+    //   dblclick event
+    let doubleClick = document.getElementById('elm2');
+    doubleClick.addEventListener('dblclick',function(){
+        document.getElementById("elm2").style.color = "green";
+        document.getElementById("elm2").style.fontSize = "large";
+        document.getElementById("elm2").style.fontWeight = "bold";
+
+    })
+    </script>
+  </body>
+</html>

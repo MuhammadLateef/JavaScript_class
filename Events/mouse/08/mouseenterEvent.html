@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mouseenter | event</title>
+  </head>
+  <body>
+    <div id="div">
+      <p>This is a div</p>
+    </div>
+
+    <script>
+        let p = document.getElementById('div');
+        p.addEventListener('mouseenter',changeColor) 
+      function changeColor() {
+        document.getElementById("div").style.backgroundColor = "blue";
+      }
+    </script>
+  </body>
+</html>

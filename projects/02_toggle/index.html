@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Night and Dark Mode Toggle</title>
+    <style>
+      body {
+        transition: background-color 0.3s;
+      }
+
+      .dark-mode {
+        background-color: #333;
+        color: #fff;
+      }
+
+      button {
+        margin: 10px;
+        padding: 8px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="modeText">Switch to Dark Mode</h1>
+    <button id="buttonText">Toggle Mode</button>
+
+    <!-- <script>
+    let isDarkMode = false;
+    let button_ = document.querySelector('button');
+    button_.addEventListener('click',toggleMode);
+    function toggleMode() {
+        let body = document.querySelector('body');
+        isDarkMode = !isDarkMode;
+        body.classList.toggle('dark-mode',isDarkMode);
+        button_.textContent = `${isDarkMode ? 'light mode' : 'night mode'}`
+    }
+  </script> -->
+    <script>
+      let buttonText = document.getElementById("buttonText");
+      buttonText.addEventListener("click", ToggleMode);
+      let dark = false;
+      function ToggleMode(params) {
+        let body = document.querySelector("body");
+        dark = !dark;
+        body.classList.toggle("dark-mode", dark);
+        buttonText.textContent = `${dark ? 'light mode' : 'dark mode'}`
+        
+      }
+    </script>
+  </body>
+</html>

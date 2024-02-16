@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mouseup | event</title>
+  </head>
+  <body>
+    <button onmousedown="openPopup()" onmouseup="closePopup()" id="btn">
+      Open/close Popup
+    </button>
+
+    <div id="popup">
+      <p>This is a popup</p>
+    </div>
+
+    <script>
+      function openPopup() {
+        document.getElementById("popup").style.display = "block";
+      }
+      // Close the popup
+      function closePopup() {
+        document.getElementById("popup").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

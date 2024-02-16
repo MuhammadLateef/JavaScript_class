@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #2f2f2d;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ul">Pakistan</div>
+        <div class="ul">India</div>
+        <div class="ul">Afghanistan</div>
+        <div class="ul">Bangal</div>
+        <div class="ul">Iran</div>
+        <div class="ul">China</div>
+        <div class="ul">Libia</div>
+        <div class="ul">United State</div>
+        <div class="ul">America</div>
+    </div>
+</body>
+<script>
+   let paranent = document.querySelector(".container");
+//    console.log(paranent);
+   console.log(paranent.children);
+   for (let i = 0; i < paranent.children.length; i++) {
+    console.log(paranent.children[i].textContent);   
+   }
+   paranent.children[1].style.color = "yellow"; 
+   paranent.children[6].style.color = "green"; 
+   paranent.children[6].style.padding = "20px"; 
+   console.log(paranent.firstElementChild.innerHTML);
+   console.log(paranent.lastElementChild.innerHTML);
+
+   const onChild = document.querySelector('.ul');
+   console.log(onChild); 
+   console.log(onChild.parentElement);
+   console.log(onChild.nextElementSibling);
+
+</script>
+</html>

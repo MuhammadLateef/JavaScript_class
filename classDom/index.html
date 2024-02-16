@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM | Class</title>
+
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main" class="mainClass">
+      <h1 class="h1">Hello World!</h1>
+      <p id="p">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. A, rerum.
+      </p>
+      <h2 class="h1">JavaSCRIPT</h2>
+      <h3 class="h1">Java</h3>
+      <h4 class="h1" id="heading4">TypeScript</h4>
+      <input type="text" value="" name="programming" />
+      <input type="text" value="" name="programming" />
+      <input type="text" value="" name="programming" />
+      <input type="text" value="" name="programming" />
+      <h2 name="programming">print</h2>
+    </div>
+
+    <ul id="main">
+      <li>Home</li>
+      <li>Service</li>
+      <li>Team</li>
+      <li class="current">Testimonials</li>
+      <li>About us</li>
+      <li>Contact us</li>
+      <li>Sign In</li>
+      <li>Sign up</li>
+    </ul>
+    <a
+      href="https://www.javascripttutorial.net/javascript-dom/javascript-setattribute/"
+      >click me</a
+    >
+    <script>
+      // let p = document.getElementById('main');
+      // console.log(p);
+      // let paragraph = document.getElementById('p');
+      // console.log(paragraph);
+
+      // let name = document.getElementsByName('programming');
+      // console.log(name);
+      // --- tag name
+
+      // let div = document.getElementsByTagName('div');
+      // console.log(div);
+
+      // --- class name
+      // let className = document.getElementsByClassName('mainClass');
+      // console.log("Get by className ",className);
+
+      // --- query seclector
+
+      // let main = document.querySelector('.mainClass');
+      // console.log("querySelector " ,main);
+      // console.log(main.firstChild)
+
+      // // -- querySelector all
+      // let main1 = document.querySelectorAll(".mainClass")
+      // console.log(main1);
+
+      // let findParent =  document.getElementById('heading4');
+      // console.log("Parent Node ",findParent.parentNode);
+      // let parent = findParent.parentNode; ///div
+      // console.log("first child ",parent.firstElementChild);
+      // console.log("last child", parent.lastElementChild);
+      // console.log("All childs ", parent.children);
+      // console.log("All childs ", parent.childNodes);
+      // ---- find siblings
+      let current = document.querySelector(".current");
+      // console.log(current.nextElementSibling);
+      // let nextSibling = current.nextElementSibling;
+      // while(nextSibling) {
+      //   console.log(nextSibling);
+      //   nextSibling = nextSibling.nextElementSibling;
+      // }
+      // console.log(current.previousElementSibling);
+      // let prevSibling = current.previousElementSibling;
+      // while(prevSibling) {
+      //   console.log("Prev sibling ",prevSibling);
+      //   prevSibling = prevSibling.previousElementSibling;
+      // }
+
+
+
+ 
+    </script>
+  </body>
+</html>

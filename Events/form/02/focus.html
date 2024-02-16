@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>focus</title>
+  </head>
+  <body>
+    <form action="">
+      <input class="input1" placeholder="enter name" id="eName" type="text" /> <br />
+      <input class="input1" placeholder="enter the password" id="ePassword" type="password" />
+      <br />
+      <input class="input1" placeholder="enter the Number" id="eNumber" type="number" /> <br />
+      <input class="input1" placeholder="enter last name" id="eLName" type="text" /> <br />
+      <button type="submit">submit</button>
+    </form>
+
+    <script>
+      let inputs = document.querySelectorAll('input');
+      inputs.forEach(element=>{
+        console.log(element);
+        element.addEventListener('focus',function(event){
+          element.style.backgroundColor = 'green';
+          element.style.border = 'solid 2px green'
+          
+        console.log('element');
+        } )
+      })
+      console.log(inputs); 
+
+
+
+
+
+
+
+      // let foucsInput = document.getElementById("eName");
+      // foucsInput.addEventListener("focus", function () {
+      //   foucsInput.style.backgroundColor  = "orange";
+      // });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dblclick | Event</title>
+  </head>
+  <body id="bodyId">
+    <div class="">
+      <h2>dblClick mouse Event</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        unde officiis libero adipisci illum rem labore dolor, esse nemo.
+        Repellendus excepturi ducimus maiores nostrum hic veritatis vero quasi,
+        necessitatibus, nisi quisquam, molestias ab. Porro eum alias recusandae
+        assumenda dolorum odio?
+      </p>
+      <button id="btn">click me!!</button>
+    </div>
+
+    <script>
+      let btn = document.getElementById("btn");
+      btn.addEventListener('dblclick',changBGColor)
+
+      function changBGColor(params) {
+        let body = document.getElementById('bodyId');
+        body.style.backgroundColor = 'black';
+        body.style.color = 'white';
+        alert("dblclick event is calling")
+      }
+    </script>
+  </body>
+</html>

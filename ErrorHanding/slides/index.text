@@ -1,0 +1,19 @@
+
+1) Syntax error 
+    - The error occurs when you use a predefined syntax incorrectly.
+
+
+2) Reference Error 
+    - In a case where a variable reference can't be found or hasn't been declared, then a Reference error occurs.
+
+
+3) Type Error 
+    - An error occurs when a value is used outside the scope of its data type.
+
+
+4) RangeError 
+    - There is an error when a range of expected values is required,
+
+
+5) URI Error - 
+    When the wrong character(s) are used in a URI function,

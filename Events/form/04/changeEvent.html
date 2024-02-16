@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>change | event</title>
+  </head>
+  <body>
+    <div id="main">
+      <input type="text" name="" id="inpufield1" />
+      <p id="inputValues"></p>
+    </div>
+
+    <script>      
+
+      let inpufield1  = document.getElementById('inpufield1');
+      inpufield1.addEventListener('change',function(e) {
+          let inputValues = document.getElementById('inputValues');
+          inputValues.innerText = `input: ${e.target.value}`
+      })
+    </script>
+  </body>
+</html>

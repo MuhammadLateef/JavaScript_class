@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keypress | event</title>
+</head>
+<body>
+    <div id="main">
+        <p id="paragraph"></p>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </div>
+
+    <script>
+
+        let count = 0;
+        let text = document.querySelector('textarea');
+        text.addEventListener('keypress',OnkeyPress);
+        function OnkeyPress(e) {
+            let p = document.getElementById('paragraph');
+            count++;
+            p.innerHTML = `you press the key:> ${e.key} and you pressed the keys ${count} Times`
+        }
+        // let count = 0;
+        // let textarea3 = document.querySelector('textarea');
+        // textarea3.addEventListener('keypress',keyPress);
+        // function keyPress(params) {
+        //     document.getElementById('paragraph').innerText = 'keypress'
+        //     document.getElementById('paragraph').style.cssText = 'padding:30px; background-color:blue;'
+  
+        // }
+    </script>
+</body>
+</html>

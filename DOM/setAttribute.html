@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set Attribute</title>
+    <style>
+      .styleDiv {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <a id="anchor">click for more information...</a>
+      <br />
+      <input type="text" id="inputId" value="Enter Name" />
+      <button type="button" onclick="clickfunction()">press this</button>
+    </div>
+
+    <div id="main1" class="styleDiv mainDiv  " style="color: blue">
+      <h1>Hello world!</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, quidem?
+      </p>
+      <button>submit</button>
+    </div>
+    <script>
+      function clickfunction() {
+        let anchorTag = document.getElementById("inputId");
+        // anchorTag.setAttribute("href", "https//");
+        // anchorTag.setAttribute("target", "_blank");
+        // anchorTag.setAttribute("style", "color:yellow;");
+        // console.log(anchorTag.setAttribute("class", "link"));
+        // let input = document.getElementById("inputId");
+        // input.setAttribute('type','password')
+        // anchorTag.removeAttribute("value");
+      }
+      //   let input = document.getElementById("inputId");
+      //   let getAttr = input.getAttribute("value");
+      //   let getAttr1 = input.getAttribute("id");
+      //   console.log("get Attribute = ", getAttr);
+      //   console.log("id = ", getAttr1);
+
+      let container = document.getElementById("main1");
+    //   container.style.backgroundColor = "black";
+    //   container.style.color = "#fff";
+    //   container.style.padding = "40px";
+    //   container.style.cssText = 'background-color:black; color:white; padding:40px'
+
+    // console.log(container.classList)  // get 
+    // // ----- set 
+
+    container.classList.add('div1');
+    console.log(container.classList);
+    // ----- remove 
+    console.log(container.classList.remove('styleDiv'));
+    console.log(container.classList);
+    </script>
+  </body>
+</html>
